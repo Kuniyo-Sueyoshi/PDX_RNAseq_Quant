@@ -4,7 +4,8 @@ The current repository includes codes that were used to quantify gene-level abun
 
 
 # salmon.sh
- Compute transcript-level abundance (.sf files) by taking seqenced reads data (.fastq) as inputs by using Salmon software (version 0.8.1) (Patro et al., 2017) on shell (ZSH_VERSION=5.0.2)
+ 1. Compute transcript-level abundance (.sf files) by taking mixed seqenced reads data (.fastq) of PDXs as inputs by using Salmon software (version 0.8.1) (Patro et al., 2017) on shell (ZSH_VERSION=5.0.2)
+ 2. Allocate mixed transcript-level abundance to human or to mouse transcriptomes.
 
 
 # Tximport.R
