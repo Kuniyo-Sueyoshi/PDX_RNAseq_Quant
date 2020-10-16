@@ -2,6 +2,8 @@
 # Environment; zsh 5.0.2 (x86_64-redhat-linux-gnu)
 # Reference:
 # Patro, R., Duggal, G., Love, M.I., Irizarry, R.A., and Kingsford, C. (2017). Salmon provides fast and bias-aware quantification of transcript expression. Nat. Methods 14, 417–419.
+# ref.hg.fa: the human whole transcriptome (GENCODE, release 27, GRCh38.p10)
+# ref.mm.fa: the mouse whole transcriptome (GENCODE, release M15, GRCm38.p5) 
 
 
 ### ref-index
@@ -13,8 +15,8 @@ dirs=`find /DIRECTORY_TO_PDX_SEQDATA/ -type d`
 for dir in $dirs
 do
     outdir="./SET_DIRECTORY_NAME_FOR_OUTPUT"
-    files_R1=`find ${dir} -type f -name "*R1*fastq.gz" | sort -t "_" -k8,8`
-    files_R2=`find ${dir} -type f -name "*R2*fastq.gz" | sort -t "_" -k8,8`
+    files_R1=`find ${dir} -type f -name "*R1*fastq.gz"
+    files_R2=`find ${dir} -type f -name "*R2*fastq.gz" 
 
     ### Execution
     salmon quant -i idx.allo.salmon -l A -1 $files_R1 -2 $files_R2 -o ${outdir}
